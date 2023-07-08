@@ -1,7 +1,7 @@
 # Bipedal-FTST-Walker
 Bipedal "FT-ST" Walker
 
-Coursework: Semester long project with team of 4. Final Grade: 100/100
+Coursework: Semester-long project with team of 4. Final Grade: 100/100
 Built a bipedal robot with ultrasonic sensing capable of walking around, programmed using the software prototyping platform, Arduino.
 
 The bipedal mechanism uses rotary motion on each leg to propel the robot forward. On the forward stroke of a leg, the robot walks forward while maintaining balance on the upper body.

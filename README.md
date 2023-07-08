@@ -1,7 +1,7 @@
 # Bipedal-FTST-Walker
 Bipedal "FT-ST" Walker
 
-Coursework: Semester-long project with team of 4. Final Grade: 100/100
+Coursework: Semester-long project with team of 4. Final Grade: 100/100. Received _the Best Prototype Award_
 
 Built a bipedal robot with ultrasonic sensing capable of walking around, programmed using the software prototyping platform, Arduino.
 

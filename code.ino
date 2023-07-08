@@ -10,6 +10,8 @@ const int trig = 8;
 const int echo = 12;
 const int buzzer = 2;
 const int laserPin = 13;
+int switchPin = 3;
+int switchState = 0;
 int duration;
 int distance;
 Servo myServo;
@@ -19,6 +21,7 @@ void setup()
  Serial.begin(9600);
  myServo.attach(11);
 
+ pinMode(laserPin, OUTPUT);
  pinMode(4, OUTPUT);
  pinMode(buzzer, OUTPUT);
  pinMode(5, OUTPUT);
@@ -28,9 +31,16 @@ void setup()
  pinMode(7, OUTPUT);
  pinMode(trig, OUTPUT);
  pinMode(echo, INPUT);
+ pinMode(switchPin, INPUT);
 digitalWrite(motorOne_Enable, HIGH);
 digitalWrite(motorTwo_Enable, HIGH);
 digitalWrite(laserPin, LOW);
+for(int degree = 179; degree >= 0; degree--)
+  {
+    myServo.write(degree);
+    delay(5);
+
+  }
 }
  
 void loop()
@@ -44,35 +54,28 @@ void loop()
 
  pinMode(echo, INPUT);
  duration = pulseIn(echo, HIGH);
+switchState = digitalRead(switchPin);
 
  distance = duration*0.034/2;
-
-if (distance > 10)
+if (switchState == HIGH)
 {
-Serial.println("Forward.");
 digitalWrite(motorOne_InputOne, HIGH);
 digitalWrite(motorOne_InputTwo, LOW);
 digitalWrite(motorTwo_InputOne, HIGH);
 digitalWrite(motorTwo_InputTwo, LOW);
-
 }
 
 if (distance <= 10)
-
 {
-
   digitalWrite(motorOne_InputOne, LOW);
   digitalWrite(motorOne_InputTwo, LOW);
   digitalWrite(motorTwo_InputOne, LOW);
   digitalWrite(motorTwo_InputTwo, LOW);
 
-  for(int degree = 0; degree <= 160; degree++)
+ for(int degree = 0; degree <= 179; degree++)
   {
-    myServo.write(degree); 
-    delay(100);
-  }
-
-  
+    myServo.write(degree);
+    delay(5);
   }
 
   //Turn on laser and buzzer makes sound
@@ -94,12 +97,17 @@ if (distance <= 10)
   noTone(buzzer);
   digitalWrite(laserPin, LOW);
   delay(500);
-  
-for(int degree = 160; degree >= 0; degree--)
+
+ for(int degree = 179; degree >= 0; degree--)
   {
     myServo.write(degree);
-    delay(100);
+    delay(5);
+  }
+digitalWrite(motorOne_InputOne, HIGH);
+digitalWrite(motorOne_InputTwo, LOW);
+digitalWrite(motorTwo_InputOne, HIGH);
+digitalWrite(motorTwo_InputTwo, LOW);
 
-  }
-  }
-  
+
+}
+}

@@ -15,9 +15,11 @@ The bipedal mechanism uses rotary motion on each leg to propel the robot forward
 
 ![image](https://github.com/ylu8888/Bipedal-FTST-Walker/assets/123523291/e530e670-bb0f-46a9-9ff2-213197377505)
 
+![image](https://github.com/ylu8888/Bipedal-FTST-Walker/assets/123523291/1ff4309a-4ba1-4e53-88bd-beeef7b64122)
+
 ![image](https://github.com/ylu8888/Bipedal-FTST-Walker/assets/123523291/7e5e1412-5396-493f-86c9-3bafb13a1bbf)
 
-![image](https://github.com/ylu8888/Bipedal-FTST-Walker/assets/123523291/abfe3c02-5ce7-4974-a20e-f16a2fe07a94)
+
 
 
 

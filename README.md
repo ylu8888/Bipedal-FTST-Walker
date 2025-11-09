@@ -1,4 +1,4 @@
-# Bipedal-FTST-Walker
+# 🤖 Bipedal-FTST-Walker 🤖
 Bipedal "FT-ST" Walker: Built a bipedal robot with ultrasonic sensing capable of walking around, programmed using C++ with the software prototyping platform, Arduino.
 
 Coursework: Semester-long project with team of 4. Final Grade: 100%. Received _the Best Prototype Award_
